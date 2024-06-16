@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snappy_wrap"
+version = "0.1"
+requires-python = ">=3.12"
+dependencies = ["snappy"]
+
+[tool.cibuildwheel]
+test-command = "python -m snappy.test"
