@@ -25,4 +25,4 @@ jobs:
 
       - name: Test SnapPy
         # run: python -c "import snappy; print(snappy.Manifold('m004').volume())"
-        run: python -m snappy.test --skip-gui --skip-modern-opengl
+        run: python -m snappy.test --skip-modern-opengl
