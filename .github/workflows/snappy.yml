@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-12, macos-13, macos-14]
+        os: [macos-11, macos-12, macos-13, macos-14]
 
     steps:
       - name: Checkout repo
@@ -24,4 +24,5 @@ jobs:
         run: python -m pip install snappy
 
       - name: Test SnapPy
-        run: python -c "import snappy; print(snappy.Manifold('m004').volume())"
+        # run: python -c "import snappy; print(snappy.Manifold('m004').volume())"
+        run: python -m snappy.test --skip-gui --skip-modern-opengl
